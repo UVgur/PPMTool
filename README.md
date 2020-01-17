@@ -5,6 +5,6 @@ includeing PT priority and status to maintain track of his busy work.
 
 
 tech stack;
-SpringBoot 2, MySQL, JWT, Ract, Redux
+SpringBoot 2, MySQL, JWT, React, Redux
 
 uploaded to heroku free tier
