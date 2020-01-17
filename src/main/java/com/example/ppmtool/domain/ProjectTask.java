@@ -1,6 +1,7 @@
-package com.example.ppmtool.entitys;
+package com.example.ppmtool.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -13,19 +14,23 @@ public class ProjectTask {
     @Id
     @GeneratedValue
     private Long id;
-    @Column(updatable = false)
+    @Column(updatable = false, unique = true)
     private String projectSequence;
     @NotBlank(message = "Please include a project summary")
-    private String summery;
+    private String summary;
 
     private String acceptanceCriteria;
     private String status;
     private Integer priority;
+
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date duDate;
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date create_At;
+    @JsonFormat(pattern = "yyyy-mm-dd")
     private Date update_At;
 
-    @ManyToOne(fetch = FetchType.EAGER , cascade = CascadeType.REFRESH)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="backlog_id", updatable = false, nullable = false)
     @JsonIgnore
     private Backlog backlog;
@@ -62,12 +67,12 @@ public class ProjectTask {
         this.projectSequence = projectSequence;
     }
 
-    public String getSummery() {
-        return summery;
+    public String getsummary() {
+        return summary;
     }
 
-    public void setSummery(String summery) {
-        this.summery = summery;
+    public void setSummary(String summary) {
+        this.summary = summary;
     }
 
     public String getAcceptanceCriteria() {
@@ -139,7 +144,7 @@ public class ProjectTask {
         return "ProjectTask{" +
                 "id=" + id +
                 ", projectSequence='" + projectSequence + '\'' +
-                ", summery='" + summery + '\'' +
+                ", summary='" + summary + '\'' +
                 ", acceptanceCriteria='" + acceptanceCriteria + '\'' +
                 ", status='" + status + '\'' +
                 ", priority=" + priority +

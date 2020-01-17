@@ -1,14 +1,11 @@
 package com.example.ppmtool.exceptions;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(HttpStatus.BAD_REQUEST)
-public class ProjectNotFoundException {
+public class ProjectNotFoundExceptionResponse {
 
     private String ProjectNotFound;
 
-    public ProjectNotFoundException(String projectNotFound) {
+    public ProjectNotFoundExceptionResponse(String projectNotFound) {
         ProjectNotFound = projectNotFound;
     }
 

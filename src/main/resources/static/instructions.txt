@@ -1,0 +1,15 @@
+SQL:
+1. download MySql bundle
+2. create a schema on SQL workbench to match the PATH on "application.properties"
+// jdbc:mysql://localhost/ppmt // (ppmt)
+3. match username and password on SQL workbench according to "application.properties"
+3. run sql server Before running the other parts.
+
+Spring:
+RUN button
+
+React:
+npm i
+npm start
+
+

@@ -1,4 +1,4 @@
-package com.example.ppmtool.entitys;
+package com.example.ppmtool.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -22,7 +22,7 @@ public class Backlog {
     @JsonIgnore //on the child end of the relationship - to end infinite loop
     private Project project;
 
-    @OneToMany(cascade = CascadeType.ALL , fetch = FetchType.EAGER , mappedBy = "backlog")
+    @OneToMany(cascade = CascadeType.REFRESH , fetch = FetchType.EAGER , mappedBy = "backlog", orphanRemoval = true)
     private List<ProjectTask> projectTasks = new ArrayList<>();
 
 
