@@ -1,8 +1,8 @@
 # PPMTool
 This project provide a 'Personal Project Management tool',
-which allowes the USER to add his Project list, add comments regarding each prject, time management,
+which allowes the USER to add a Project list, add comments regarding each project,
 and even assign Project Tasks to each project, stateing Priority and ststus of those ProjectTasks.
-each USER can *only* access his OWN projectS(!)
+    each USER can *only* access his OWN projectS(!)
 
     Full stack Personal Project Management Tool application
 
