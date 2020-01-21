@@ -24,7 +24,7 @@ public class ProjectTask {
     private Integer priority;
 
     @JsonFormat(pattern = "yyyy-mm-dd")
-    private Date duDate;
+    private Date dueDate;
     @JsonFormat(pattern = "yyyy-mm-dd")
     private Date create_At;
     @JsonFormat(pattern = "yyyy-mm-dd")
@@ -99,12 +99,12 @@ public class ProjectTask {
         this.priority = priority;
     }
 
-    public Date getDuDate() {
-        return duDate;
+    public Date getDueDate() {
+        return dueDate;
     }
 
-    public void setDuDate(Date duDate) {
-        this.duDate = duDate;
+    public void setDueDate(Date dueDate) {
+        this.dueDate = dueDate;
     }
 
     public Date getCreate_At() {
@@ -148,7 +148,7 @@ public class ProjectTask {
                 ", acceptanceCriteria='" + acceptanceCriteria + '\'' +
                 ", status='" + status + '\'' +
                 ", priority=" + priority +
-                ", duDate=" + duDate +
+                ", dueDate=" + dueDate +
                 ", create_At=" + create_At +
                 ", update_At=" + update_At +
                 ", projectIdentifier='" + projectIdentifier + '\'' +
