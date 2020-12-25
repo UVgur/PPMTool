@@ -27,9 +27,10 @@ public class User implements UserDetails {
 
     @NotBlank(message = "Please enter your full name")
     private String fullName;
+    
     @NotBlank(message = "Password field is required")
+    @Size(message = "Minimun of Six characters")
     private String password;
-
     @Transient
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String confirmPassword;
